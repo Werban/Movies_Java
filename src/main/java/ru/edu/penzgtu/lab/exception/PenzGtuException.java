@@ -5,7 +5,7 @@ package ru.edu.penzgtu.lab.exception;
 import lombok.Getter;
 
 @Getter
-public class PenzGtuException extends Exception {
+public class PenzGtuException extends RuntimeException {
     private final ErrorType type;
 
     public PenzGtuException(ErrorType type, String message) {

@@ -36,10 +36,5 @@ public class ExceptionApiHandler {
         log.error("Got validation exception {}, message: {}", e.getClass(), e.getMessage());
 
         return baseResponseService.wrapErrorResponse(new PenzGtuException(ErrorType.CLIENT_ERROR, e));
-
-
-
-
-
     }
 }
