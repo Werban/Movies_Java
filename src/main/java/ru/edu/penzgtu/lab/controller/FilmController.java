@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.edu.penzgtu.lab.baseresponse.BaseResponseService;
 import ru.edu.penzgtu.lab.baseresponse.ResponseWrapper;
 import ru.edu.penzgtu.lab.dto.FilmDto;
-import ru.edu.penzgtu.lab.entity.Film;
 import ru.edu.penzgtu.lab.service.FilmService;
 import java.util.List;
 @Validated

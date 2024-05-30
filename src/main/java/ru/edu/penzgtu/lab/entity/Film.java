@@ -24,11 +24,11 @@ public class Film {
 
     @ManyToMany
     @JoinTable(
-            name = "films_directors",
-            joinColumns = @JoinColumn(name = "rating_id", referencedColumnName = "id"),
+            name = "films_actors",
+            joinColumns = @JoinColumn(name = "actore_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id")
     )
-    private List<Rating> ratings;
+    private List<Actor> actors;
 
     @ManyToMany
     @JoinTable(
@@ -40,9 +40,10 @@ public class Film {
 
     @ManyToMany
     @JoinTable(
-            name = "films_actors",
-            joinColumns = @JoinColumn(name = "actore_id", referencedColumnName = "id"),
+            name = "films_directors",
+            joinColumns = @JoinColumn(name = "rating_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id")
     )
-    private List<Actor> actors;
+    private List<Rating> ratings;
+
 }

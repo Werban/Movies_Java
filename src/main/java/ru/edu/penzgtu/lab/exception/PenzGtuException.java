@@ -1,8 +1,10 @@
 package ru.edu.penzgtu.lab.exception;
 
 
-import jakarta.persistence.AssociationOverride;
 
+import lombok.Getter;
+
+@Getter
 public class PenzGtuException extends Exception {
     private final ErrorType type;
 
@@ -19,10 +21,6 @@ public class PenzGtuException extends Exception {
     public PenzGtuException(ErrorType type, Throwable throwable) {
         super(throwable);
         this.type = type;
-    }
-
-    public ErrorType getType() {
-        return type;
     }
 
 

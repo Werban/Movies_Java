@@ -24,7 +24,7 @@ public class FilmService {
 
     @SneakyThrows
     public FilmDto findFilmById(Long id) {
-        Film film= filmRepository.findById(id).orElseThrow(() -> new PenzGtuException(ErrorType.NOT_FOUND,"film not found"));
+        Film film= filmRepository.findById(id).orElseThrow(() -> new PenzGtuException(ErrorType.NOT_FOUND,"Film not found"));
 
        return filmMapper.toDto(film);
     }

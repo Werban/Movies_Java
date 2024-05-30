@@ -5,7 +5,6 @@ import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 import ru.edu.penzgtu.lab.dto.ActorDto;
 import ru.edu.penzgtu.lab.entity.Actor;
-import ru.edu.penzgtu.lab.entity.Actor;
 import ru.edu.penzgtu.lab.exception.ErrorType;
 import ru.edu.penzgtu.lab.exception.PenzGtuException;
 import ru.edu.penzgtu.lab.repo.ActorRepository;

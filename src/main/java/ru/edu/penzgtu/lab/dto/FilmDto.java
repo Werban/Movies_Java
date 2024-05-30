@@ -14,24 +14,25 @@ import java.util.List;
 public class FilmDto {
 
     @JsonProperty("id")
-    @Schema(description = "ID фильма в бд", example = "123")
+    @Schema(description = "ID фильма в бд", example = "345")
     private Long id;
 
     @JsonProperty("name")
     @NotBlank
-    @Schema(description = "Название фильма", example = "Марсианин")
+    @Schema(description = "Название фильма", example = "Интерстеллар")
     private String name;
 
+    @JsonProperty("actors")
+    @Schema(description = "Названия фильмов в которых снимался актер")
+    private List<String> actors;
+
     @JsonProperty("director")
-    @Schema(description = "названия фильмов в которых он был режисером")
+    @Schema(description = "Названия фильмов в которых он был режисером")
     private List<String> director;
 
     @JsonProperty("rating")
-    @Schema(description = "рейтинг который был выставлен фильму")
+    @Schema(description = "Рейтинг который был выставлен фильму")
     private List<String> rating;
 
-    @JsonProperty("actors")
-    @Schema(description = "названия фильмов в которых снимался актер")
-    private List<String> actors;
 
 }

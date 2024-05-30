@@ -40,7 +40,7 @@ public class RatingService {
         Rating oldRating = ratingRepository.findById(newRating.getId())
                 .orElseThrow(() -> new RuntimeException("Rating not found"));
 
-        oldRating.setRating(Integer.parseInt(newRating.getRating()));
+        oldRating.setRating(newRating.getRating());
         oldRating.setName(newRating.getName());
         oldRating.setDate(newRating.getDate());
 

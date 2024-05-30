@@ -2,11 +2,8 @@ package ru.edu.penzgtu.lab.service.mapper;
 
 import org.springframework.stereotype.Service;
 import ru.edu.penzgtu.lab.dto.RatingDto;
-import ru.edu.penzgtu.lab.dto.RatingDto;
 import ru.edu.penzgtu.lab.entity.Rating;
 import ru.edu.penzgtu.lab.entity.Film;
-import ru.edu.penzgtu.lab.entity.Rating;
-
 import java.util.List;
 
 @Service
@@ -20,7 +17,7 @@ public class RatingMapper {
         return RatingDto.builder()
                 .id(rating.getId())
                 .name(rating.getName())
-                .rating(String.valueOf(rating.getRating()))
+                .rating(rating.getRating())
                 .date(rating.getDate())
                 .films(rating.getFilms().stream()
                         .map(Film::getName)
@@ -33,7 +30,7 @@ public class RatingMapper {
 
         rating.setId(rating.getId());
         rating.setName(ratingDto.getName());
-        rating.setRating(Integer.parseInt(ratingDto.getRating()));
+        rating.setRating(ratingDto.getRating());
         rating.setDate(ratingDto.getDate());
         return rating;
     }

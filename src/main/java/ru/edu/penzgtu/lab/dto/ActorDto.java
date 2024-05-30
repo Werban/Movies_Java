@@ -15,7 +15,7 @@ import java.util.List;
 public class ActorDto {
 
     @JsonProperty("id")
-    @Schema(description = "ID актера в бд", example = "123")
+    @Schema(description = "ID актера в бд", example = "345")
     private Long id;
 
     @JsonProperty("name")
@@ -30,11 +30,11 @@ public class ActorDto {
 
     @JsonProperty("date")
     @NotBlank
-    @Schema(description = "год рождения", example = "30-01-1974")
+    @Schema(description = "Год рождения", example = "30-01-1974")
     private LocalDate date;
 
     @JsonProperty("films")
-    @Schema(description = "названия фильмов в которых снимался актер")
+    @Schema(description = "Названия фильмов в которых снимался актер")
     private List<String> films;
 
 }

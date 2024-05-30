@@ -15,26 +15,26 @@ import java.util.List;
 public class RatingDto {
 
     @JsonProperty("id")
-    @Schema(description = "ID оценки в бд", example = "123")
+    @Schema(description = "ID оценки в бд", example = "345")
     private Long id;
 
     @JsonProperty("name")
     @NotBlank
-    @Schema(description = "Имя пользователя", example = "Антон")
+    @Schema(description = "Имя пользователя", example = "Олег")
     private String name;
 
     @JsonProperty("rating")
     @NotBlank
     @Schema(description = "Рейтинг", example = "8.7")
-    private String rating;
+    private Integer rating;
 
     @JsonProperty("date")
     @NotBlank
-    @Schema(description = "дата")
+    @Schema(description = "Дата")
     private LocalDate date;
 
     @JsonProperty("films")
-    @Schema(description = "название фильма к которому выставлен рейтинг")
+    @Schema(description = "Название фильма к которому выставлен рейтинг")
     private List<String> films;
 
 }
