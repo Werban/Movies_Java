@@ -17,7 +17,7 @@ public class RatingMapper {
         return RatingDto.builder()
                 .id(rating.getId())
                 .name(rating.getName())
-                .rating(rating.getRating())
+                .rating( rating.getRating())
                 .date(rating.getDate())
                 .films(rating.getFilms().stream()
                         .map(Film::getName)

@@ -25,7 +25,7 @@ public class Rating {
     private String name;
 
     @Column(name = "rating")
-    private int rating;
+    private Double rating;
 
     @Column(name="date")
     private LocalDate date;

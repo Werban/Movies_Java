@@ -22,7 +22,7 @@ public class FilmMapper {
                 .users(film.getUsers().stream()
                         .map(User::getName)
                         .toList())
-                .director(film.getGenres().stream()
+                .genre(film.getGenres().stream()
                         .map(Genre::getName)
                         .toList())
                 .rating(film.getRatings().stream()

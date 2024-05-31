@@ -26,9 +26,9 @@ public class FilmDto {
     @Schema(description = "Имя пользователя который оценил фильм")
     private List<String> users;
 
-    @JsonProperty("director")
-    @Schema(description = "Названия фильмов в которых он был режисером")
-    private List<String> director;
+    @JsonProperty("genre")
+    @Schema(description = "Жанр фильма")
+    private List<String> genre;
 
     @JsonProperty("rating")
     @Schema(description = "Рейтинг который был выставлен фильму")

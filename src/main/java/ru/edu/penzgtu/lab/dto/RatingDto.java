@@ -26,7 +26,7 @@ public class RatingDto {
     @JsonProperty("rating")
     @NotBlank
     @Schema(description = "Рейтинг", example = "8.7")
-    private Integer rating;
+    private Double rating;
 
     @JsonProperty("date")
     @NotBlank
