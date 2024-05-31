@@ -14,8 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table(name = "actors")
-public class Actor {
+@Table(name = "genres")
+public class Genre {
     @Id
     @GeneratedValue
     @Column(name = "id")
@@ -24,12 +24,12 @@ public class Actor {
     @Column(name = "Name")
     private String name;
 
-    @Column(name="surname")
-    private String surname;
+    @Column(name="description")
+    private String description;
 
     @Column(name="date")
     private LocalDate date;
 
-    @ManyToMany(mappedBy = "actors")
+    @ManyToMany(mappedBy = "genres")
     private List<Film> films;
 }

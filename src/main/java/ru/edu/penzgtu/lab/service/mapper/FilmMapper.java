@@ -2,8 +2,8 @@ package ru.edu.penzgtu.lab.service.mapper;
 
 import org.springframework.stereotype.Service;
 import ru.edu.penzgtu.lab.dto.FilmDto;
-import ru.edu.penzgtu.lab.entity.Actor;
-import ru.edu.penzgtu.lab.entity.Director;
+import ru.edu.penzgtu.lab.entity.User;
+import ru.edu.penzgtu.lab.entity.Genre;
 import ru.edu.penzgtu.lab.entity.Film;
 import ru.edu.penzgtu.lab.entity.Rating;
 
@@ -19,11 +19,11 @@ public class FilmMapper {
         return FilmDto.builder()
                 .id(film.getId())
                 .name(film.getName())
-                .actors(film.getActors().stream()
-                        .map(Actor::getName)
+                .users(film.getUsers().stream()
+                        .map(User::getName)
                         .toList())
-                .director(film.getDirectors().stream()
-                        .map(Director::getName)
+                .director(film.getGenres().stream()
+                        .map(Genre::getName)
                         .toList())
                 .rating(film.getRatings().stream()
                         .map(Rating::getName)

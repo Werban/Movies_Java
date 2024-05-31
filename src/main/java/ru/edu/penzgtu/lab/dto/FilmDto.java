@@ -22,9 +22,9 @@ public class FilmDto {
     @Schema(description = "Название фильма", example = "Интерстеллар")
     private String name;
 
-    @JsonProperty("actors")
-    @Schema(description = "Названия фильмов в которых снимался актер")
-    private List<String> actors;
+    @JsonProperty("user")
+    @Schema(description = "Имя пользователя который оценил фильм")
+    private List<String> users;
 
     @JsonProperty("director")
     @Schema(description = "Названия фильмов в которых он был режисером")
